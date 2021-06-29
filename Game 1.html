@@ -6,13 +6,107 @@
     <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  </head>
+ <script>
+var touchSphere = new Boolean(false);
+AFRAME.registerComponent("event-listener", {
+init: function() {
+	
+this.el.addEventListener("click", function(e) {
+// console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+	if(e.target.getAttribute('id') == 'icon1'){
+document.getElementById("frame1").setAttribute('opacity', 1);
+}
+// alert(e.target.id);
+//alert(touchSphere);
+});
+	
+this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon2'){
+document.getElementById("frame2").setAttribute('opacity', 1);
+}
+});
+	
+this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon3'){
+document.getElementById("frame3").setAttribute('opacity', 1);
+}
+});
+	
+	this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon4'){
+document.getElementById("frame4").setAttribute('opacity', 1);
+}
+});
+	
+	this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon5'){
+document.getElementById("frame5").setAttribute('opacity', 1);
+}
+});
+	
+	this.el.addEventListener("click", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
+   if(e.target.getAttribute('id') == 'icon6'){
+document.getElementById("frame6").setAttribute('opacity', 1);
+}
+});
+	
+this.el.addEventListener("mouseleave", function(e) {
+//console.log(e.target)
+e.target.setAttribute('scale', {x: 1, y: 1, z: 1});
+});
+}
+});
+</script>
+	</head>
   <body>
-    <a-scene>
-      <a-sky src="111111.jpg" rotation="0 -130 0"></a-sky>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-sky src="game 3.jpg" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans", France" width="6" position="-2.5 0.25 -1.5"
+		<a-sky id="frame1" src="frame1.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 103.5 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame2" src="frame2.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -134.8 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame3" src="frame3.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -46.85 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame4" src="frame4.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 0.74 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame5" src="frame5.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -87 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+		<a-sky id="frame6" src="frame6.png"   material="color: white; opacity: 0; transparent: true;  " rotation="0 -222 0"  scale="0.9 0.9 0.9"></a-sky>
+		
+<a-text font="kelsonsans", France" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
+							   
+<a-plane id="icon1" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon01" position="-1.55 2.2 -5" rotation="0 0 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon2" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon02" position="-5.55 2.25 -1.2" rotation="0 80 0" width="1" height="4"
+ shadow></a-plane>
+ 
+  <a-plane id="icon3" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon03" position="-5.55 2.25 1.5" rotation="0 93 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon4" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon04" position="3.85 2.25 -4" rotation="0 -30 0" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon5" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon05" position="5.78 2.25 -0.45" rotation="0 -70 1" width="1" height="4"
+ shadow></a-plane>
+ 
+ <a-plane id="icon6" event-listener material="transparent:true; color:#ffffff; opacity:1" src="123456.png" id="icon06" position="4.5 2.25 4.02" rotation="0 -115 1" width="1" height="4"
+ shadow></a-plane -->
+ 
     </a-scene>
+		
   </body>
 </html>
